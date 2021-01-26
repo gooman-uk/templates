@@ -50,7 +50,7 @@ RULE2
 
 This rule polls the MCU every 60s as a keep-alive which triggers the MCU to send the status hex string via a tele/<topic>/RESULT message as follows:
 
-  `tele/tasmota_B7AE5F/RESULT = {""SSerialReceived"":""F2F202100202020019000100010015010000014A7E""}`
+  `tele/tasmota_B7AE5F/RESULT = {"SSerialReceived":"F2F202100202020019000100010015010000014A7E"}`
 
 Deconstructing this status string is a challenge - you may want to take advantage of an MQTT helper app I wrote to transform it into discrete MQTT messages for POWER, CHILDLOCK, MODE, TEMP, TIMER and SETPOINT - see [https://github.com/gooman-uk/devola-mqtt](https://github.com/gooman-uk/devola-mqtt)
 
